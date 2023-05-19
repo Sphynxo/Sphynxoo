@@ -33,7 +33,7 @@ menuBtn.addEventListener("click", function () {
 
 servicesWeb.addEventListener("click", function () {
   infoTxt.textContent =
-    "Welcome to my web development service! I specialize in building modern and responsive websites using HTML5, CSS3, Tailwind CSS, TypeScript, JavaScript, and Vue.js. From visually appealing designs to seamless interactions, I create engaging websites that meet your unique needs. Let's work together to bring your web development project to life! Contact me today to discuss your requirements.";
+    "Welcome to my web development service! I specialize in building modern and responsive websites using HTML5, CSS3, Tailwind CSS, TypeScript, JavaScript, and React.js. From visually appealing designs to seamless interactions, I create engaging websites that meet your unique needs. Let's work together to bring your web development project to life! Contact me today to discuss your requirements.";
   servicesWeb.classList.add("info-active");
   servicesUi.classList.remove("info-active");
   servicesDesign.classList.remove("info-active");

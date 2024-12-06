@@ -1,0 +1,38 @@
+[
+  {
+    "name": "HTML5",
+    "image": "../public/img/html.svg"
+  },
+  {
+    "name": "CSS3",
+    "image": "../public/img/css.svg"
+  },
+  {
+    "name": "JavaScript",
+    "image": "../public/img/js.svg"
+  },
+  {
+    "name": "React",
+    "image": "../public/img/react.svg"
+  },
+  {
+    "name": "TypeScript",
+    "image": "../public/img/ts.svg"
+  },
+  {
+    "name": "Rest API",
+    "image": "../public/img/rest.svg"
+  },
+  {
+    "name": "Styled Components",
+    "image": "../public/img/styled-components.svg"
+  },
+  {
+    "name": "Material UI",
+    "image": "../public/img/material-ui.svg"
+  },
+  {
+    "name": "Tailwind CSS",
+    "image": "../public/img/tailwind.svg"
+  }
+]

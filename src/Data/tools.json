@@ -1,38 +1,38 @@
 [
   {
     "name": "HTML5",
-    "image": "../public/img/html.svg"
+    "image": "/img/html.svg"
   },
   {
     "name": "CSS3",
-    "image": "../public/img/css.svg"
+    "image": "/img/css.svg"
   },
   {
     "name": "JavaScript",
-    "image": "../public/img/js.svg"
+    "image": "/img/js.svg"
   },
   {
     "name": "React",
-    "image": "../public/img/react.svg"
+    "image": "/img/react.svg"
   },
   {
     "name": "TypeScript",
-    "image": "../public/img/ts.svg"
+    "image": "/img/ts.svg"
   },
   {
     "name": "Rest API",
-    "image": "../public/img/rest.svg"
+    "image": "/img/rest.svg"
   },
   {
     "name": "Styled Components",
-    "image": "../public/img/styled-components.svg"
+    "image": "/img/styled-components.svg"
   },
   {
     "name": "Material UI",
-    "image": "../public/img/material-ui.svg"
+    "image": "/img/material-ui.svg"
   },
   {
     "name": "Tailwind CSS",
-    "image": "../public/img/tailwind.svg"
+    "image": "/img/tailwind.svg"
   }
 ]

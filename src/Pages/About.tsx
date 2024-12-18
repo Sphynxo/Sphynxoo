@@ -7,7 +7,7 @@ export default function About() {
           Irakli Zhordania
         </span>
       </h1>
-      <article className="text-[1.6rem] mt-[4.8rem] md:mt-[6.4rem] lg:leading-[3.2rem]">
+      <article className="text-[1.6rem] mt-[4.8rem] md:mt-[6.4rem] lg:leading-[3.2rem] 3xl:text-[2rem]">
         <p className="indent-[1.6rem]">
           I am a Front-End Web Developer with a background in Computer
           Engineering and over 8 years of IT experience. My path has

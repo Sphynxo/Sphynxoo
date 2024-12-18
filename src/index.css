@@ -35,3 +35,39 @@ body {
   background-size: cover;
   color: #ffffff;
 }
+
+form {
+  position: relative;
+  z-index: 1;
+}
+
+@layer utilities {
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    @apply bg-transparent text-inherit border-green !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: inherit;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Reduced width */
+}
+
+::-webkit-scrollbar-track {
+  background: #414141; /* Background of the scrollbar track */
+  border-radius: 6px; /* Slightly smaller border-radius */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00c896; /* Scrollbar handle */
+  border-radius: 6px; /* Matching smaller border-radius */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #048867; /* Scrollbar handle on hover */
+}
+

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Devfinder",
+    "liveLink": "https://illustrious-halva-337b9c.netlify.app/",
+    "codeLink": "https://github.com/username/project1",
+    "techStack": ["React", "Tailwind"]
+  },
+  {
+    "id": 2,
+    "title": "Multi Step Form",
+    "liveLink": "https://glowing-lebkuchen-28ccbd.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/Multi-Step-Form.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 3,
+    "title": "Devjobs web app",
+    "liveLink": "https://magical-peony-c92189.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/DevJobs.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 4,
+    "title": "Ecommerce Component",
+    "liveLink": "https://incandescent-cucurucho-3e6bc0.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/Ecommerce-Product-Page.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 5,
+    "title": "Job listings with filtering",
+    "liveLink": "https://shimmering-axolotl-1d21f8.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/Job-Listings.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 6,
+    "title": "Easybank landing page",
+    "liveLink": "https://tiny-begonia-a56b83.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/EasyBank.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 7,
+    "title": "Body Mass Index calculator",
+    "liveLink": "https://shiny-paletas-1147a3.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/BMI-Calculator.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 8,
+    "title": "Advice generator",
+    "liveLink": "https://deluxe-maamoul-0628ea.netlify.app/",
+    "codeLink": "https://github.com/Sphynxo/Advice-Generator.git",
+    "techStack": ["HTML", "CSS", "JavaScript"]
+  }
+]

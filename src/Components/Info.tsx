@@ -74,7 +74,7 @@ export default function Info({
         >
           <div className="w-full md:flex md:justify-center">
             <img
-              src="../public/img/sphynxo.jpg"
+              src="/img/sphynxo.jpg"
               alt=""
               className="w-full rounded-[2.4rem] md:w-[48rem] xl:w-full"
             />

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="xl:flex xl:flex-col">
+    <div className="xl:flex xl:flex-col 3xl:pt-[4rem]">
       <h1 className="text-[2.4rem]">
         Hi there! My name is{" "}
         <span className="text-[3.2rem] text-green">

@@ -1,14 +1,13 @@
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
-import { FaRegEnvelope } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
 
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 
 function Icon({ id, open }: { id: number; open: number }) {
   return (
@@ -75,7 +74,7 @@ export default function Info({
         >
           <div className="w-full md:flex md:justify-center">
             <img
-              src="/img/sphynxo.jpg"
+              src="../public/img/sphynxo.jpg"
               alt=""
               className="w-full rounded-[2.4rem] md:w-[48rem] xl:w-full"
             />
@@ -107,11 +106,11 @@ export default function Info({
               <FaGithub className="text-[2.4rem] text-white hover:text-green transition-all duration-300 hover:scale-110" />
             </a>
           </div>
-          <Link to={"/contact"}>
+          <a href="/Irakli-Zhordania.pdf" download>
             <button className="text-dark w-full bg-green flex items-center justify-center gap-[0.4rem] text-[1.6rem] rounded-[2.4rem] py-[1.4rem] border-[1px] border-green hover:bg-transparent hover:text-green  transition-all duration-300 ">
-              <FaRegEnvelope /> Contact Me
+              <HiDownload /> download CV
             </button>
-          </Link>
+          </a>
         </div>
       </AccordionBody>
     </Accordion>

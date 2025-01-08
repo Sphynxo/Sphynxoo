@@ -1,78 +1,101 @@
-import React, { useEffect, useState } from "react";
-import projects from "../Data/projects.json";
 import { FaGithub } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
 interface Project {
   id: number;
   title: string;
   liveLink: string;
   codeLink: string;
+  imageLink: string;
 }
 
 const Works: React.FC = () => {
-  const [thumbnails, setThumbnails] = useState<
-    Record<number, string>
-  >({}); // Explicit type
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoadning] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchThumbnails = async () => {
-      const updatedThumbnails: Record<number, string> = {}; // Explicit type
-      for (let project of projects as Project[]) {
-        const apiKey = "P1850YK-3AS4NVW-QQ8N5YV-E5NHCV3";
-        const apiUrl = `https://shot.screenshotapi.net/screenshot?token=${apiKey}&url=${project.liveLink}&output=image&width=300&height=200`;
-
-        updatedThumbnails[project.id] = apiUrl;
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://sheetdb.io/api/v1/ml9dnjp0bnbkm"
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const result = await response.json();
+        console.log(result);
+        setProjects(result);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unknown error occurred");
+        }
+      } finally {
       }
-      setThumbnails(updatedThumbnails);
+      setLoadning(false);
     };
-    fetchThumbnails();
+
+    fetchData();
   }, []);
 
+  if (loading)
+    return (
+      <div
+        className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        role="status"
+      >
+        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+          Loading...
+        </span>
+      </div>
+    );
+  if (error) return <p>Error: {error}</p>;
+
   return (
-    <section className="w-full h-full overflow-y-auto xl:px-[4rem]" id="works">
-        <div className="grid place-items-center justify-items-center gap-[4rem] md:grid-cols-2 3xl:grid-cols-3 w-full mb-[2.4rem] overflow-y-auto">
-          {projects.map((project: Project) => (
-            <div
-              key={project.id}
-              className="bg-gray rounded-[1.6rem] shadow-md overflow-hidden w-full opacity-70"
-            >
-              <img
-                src={
-                  thumbnails[project.id] ||
-                  "https://via.placeholder.com/300x200"
-                }
-                alt={project.title}
-                className="w-full h-auto object-cover"
-                loading="lazy"
-              />
-              <div className="p-[2rem]">
-                <h3 className="text-[2rem] text-green">
-                  {project.title}
-                </h3>
-                <div className="flex justify-between mt-[2rem]">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bg-green px-[1.2rem] py-[0.4rem] text-[1.4rem] text-dark rounded-[1.2rem] border-[1px] border-green hover:bg-transparent hover:text-white duration-300 transition-all">
-                      view project
-                    </button>
-                  </a>
-                  <a
-                    href={project.codeLink}
-                    className="text-dark hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub className="text-[2.4rem] text-white hover:text-green transition-all duration-300 hover:scale-110" />
-                  </a>
-                </div>
+    <section
+      className="w-full h-full overflow-y-auto xl:px-[4rem]"
+      id="works"
+    >
+      <div className="grid place-items-center justify-items-center gap-[4rem] md:grid-cols-2 3xl:grid-cols-3 w-full mb-[2.4rem] overflow-y-auto">
+        {projects.map((project: Project) => (
+          <div
+            key={project.id}
+            className="bg-gray rounded-[1.6rem] shadow-md overflow-hidden w-full opacity-70"
+          >
+            <img
+              src={project.imageLink}
+              alt={project.title}
+              className="w-full h-[20rem] object-cover"
+            />
+            <div className="p-[2rem]">
+              <h3 className="text-[2rem] text-green">
+                {project.title}
+              </h3>
+              <div className="flex justify-between mt-[2rem]">
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-green px-[1.2rem] py-[0.4rem] text-[1.4rem] text-dark rounded-[1.2rem] border-[1px] border-green hover:bg-transparent hover:text-white duration-300 transition-all">
+                    view project
+                  </button>
+                </a>
+                <a
+                  href={project.codeLink}
+                  className="text-dark hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub className="text-[2.4rem] text-white hover:text-green transition-all duration-300 hover:scale-110" />
+                </a>
               </div>
             </div>
-          ))}
-        </div>
-
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
